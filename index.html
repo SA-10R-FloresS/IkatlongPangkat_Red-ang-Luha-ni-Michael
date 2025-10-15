@@ -169,24 +169,116 @@
 			border-color: #800000 !important;
 			color: white !important;
 		}
+
+		.custom-link {
+			display: inline-flex;
+			align-items: center;
+			width: 300px;
+			background: linear-gradient(to right, #c62828, #d32f2f);
+			border-radius: 50px;
+			color: white;
+			font-weight: 700;
+			font-size: 1.2rem;
+			text-decoration: none;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			transition: transform 0.2s ease;
+		}
+
+		.custom-link:hover {
+			transform: scale(1.05);
+			text-transform: uppercase;
+		}
+
+		.icon-circle {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #b71c1c;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.drop-icon {
+			font-size: 1.5rem;
+			line-height: 1;
+		}
+
+		#titleText {
+			position: absolute;
+			top: 5px;
+			width: 100%;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: 800;
+			color: white;
+			text-shadow: 1px 1px 4px rgba(255, 0, 0, 0.7);
+			z-index: 2;
+			pointer-events: none;
+		}
 </style>
 </head>
 <body>
 	<img src="paint.png" id="paint">
-	<div class="container">
+	<div id="titleText">RED ANG LUHA NI MICHAEL - JIMMY ALCANTARA</div>
+	<div class="container mt-5">
 		<div class="fridge">
 			<div class="shelves">
-				<div class="shelf">Banghay<br>Tauhan<br>Tunggalian<br>Tema</div>
-				<div class="shelf">Formalismo<br>Marxismo</div>
+				<div class="shelf">
+					<h3 class="fw-bold">Mga Elemento ng <br> Maikling Kwento</h3>
+					<a href="banghay.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">📈</span>
+						</div>
+						<span class="link-text">Banghay</span>
+					</a>
+					<a href="tauhan.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">👥</span>
+						</div>
+						<span class="link-text">Tauhan</span>
+					</a>
+					<a href="tunggalian.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">👊</span>
+						</div>
+						<span class="link-text">Tunggalian</span>
+					</a>
+					<a href="tema.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">✏️</span>
+						</div>
+						<span class="link-text">Tema</span>
+					</a>
+				</div>
+				<div class="shelf">
+					<h3 class="fw-bold">Mga Panunuring Pampanitikan</h3>
+					<a href="formalismo.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">🔍</span>
+						</div>
+						<span class="link-text">Formalismo</span>
+					</a>
+					<a href="marxismo.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">💰</span>
+						</div>
+						<span class="link-text">Marxismo</span>
+					</a>
+					<a href="sanggunian.html" class="custom-link mx-auto">
+						<div class="icon-circle me-2">
+							<span class="drop-icon">🏅</span>
+						</div>
+						<span class="link-text">Mga Sanggunian</span>
+					</a>
+				</div>
 			</div>
 			<div class="door top-door"></div>
 			<div class="door bottom-door"></div>
 		</div>
 	</div>
 
-	<button id="colorBtn" class="btn btn-sm" style="position: fixed; bottom: 20px; left: 20px; z-index: 100;">
-		🩸
-	</button>
+	<button id="colorBtn" class="btn btn-sm" style="position: fixed; bottom: 20px; left: 20px; z-index: 100;">🩸</button>
 
 <script>
 	const topDoor = document.querySelector('.top-door');
